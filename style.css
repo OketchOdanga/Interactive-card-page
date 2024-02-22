@@ -20,14 +20,14 @@ main{
 }
 
 .cards{
-    background: url(./images/bg-main-desktop.png);
+    background: url(./bg-main-desktop.png);
     background-size: contain;
     background-repeat: no-repeat; 
     background-position: left;
 }
 
 .frontView{
-    background: url('./images/bg-card-front.png');
+    background: url('./bg-card-front.png');
     background-size:  100%;
     background-repeat: no-repeat;
     height: 245px;
@@ -58,7 +58,7 @@ main{
 }
 
 .backView{
-    background: url('./images/bg-card-back.png');
+    background: url('./bg-card-back.png');
     background-size:  100%;
     background-repeat: no-repeat;
     height: 245px;
@@ -203,7 +203,7 @@ button a, a:active, a:hover , a:focus {
         height: 100%;
     }
     .cards{
-        background: url(./images/bg-main-mobile.png);
+        background: url(./bg-main-mobile.png);
         background-size: 100% 40vh;
         background-repeat: no-repeat;
         width: 100%;
