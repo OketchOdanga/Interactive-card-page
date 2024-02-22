@@ -1,0 +1,298 @@
+@import url(https://fonts.google.com/specimen/Space+Grotesk);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Space Grotesk , sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+}
+
+.cards{
+    background: url(./images/bg-main-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: left;
+}
+
+.frontView{
+    background: url('./images/bg-card-front.png');
+    background-size:  100%;
+    background-repeat: no-repeat;
+    height: 245px;
+    width: 447px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: hsl(0, 0%, 100%);
+    display: grid;
+    padding: 1rem 1.5rem;
+    
+}
+
+.frontView .cNo{
+   display: flex;
+   align-items: center;
+   font-size: 22px;
+   letter-spacing: .5rem;
+   
+}
+
+.frontView .holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.backView{
+    background: url('./images/bg-card-back.png');
+    background-size:  100%;
+    background-repeat: no-repeat;
+    height: 245px;
+    width: 447px;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.backView p{
+    position: absolute;
+    top: 45%;
+    right: 12%;
+    color: white;
+}
+
+.info{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .form{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap: 1.5rem;
+    cursor: pointer;
+    
+}
+.cardholdername,
+.cardnumber,
+.info2,
+.cvc{
+    display: grid;
+    cursor: pointer;
+}
+#cardholderName, #cardnumber{
+    height: 3rem;
+    width: 25rem;
+    border-radius: 15px;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+.timeNumber{
+    display: flex;
+    justify-content: space-between;
+}
+#expirydate{
+    width: 7rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+#cvc{
+    height: 3rem;
+    width: 5rem;
+    border-radius: 15px;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+label{
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+input{
+    color: hsl(278, 68%, 11%);
+    cursor: pointer;
+}
+
+input:active,
+input:focus{
+    border: 1px solid linear-gradient( hsl(249, 99%, 64%) , hsl(278, 94%, 30%));
+}
+
+input::placeholder{
+    font-size: 18px;
+    color: hsl(270, 3%, 87%);
+}
+
+#text{
+    font-size: 14px;
+}
+
+
+button{
+    background: hsl(278, 68%, 11%);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button a, a:active, a:hover , a:focus {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+} 
+
+/* || confirm */
+
+.confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+.confirm h1{
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.confirm p{
+    color: hsl(279, 6%, 55%);
+}
+
+.confirm .button{
+    background: hsl(278, 68%, 11%);
+    color: white;
+    width: 25rem;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width:425px) {
+    main{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: none;
+        row-gap: 1rem;
+        height: 100%;
+    }
+    .cards{
+        background: url(./images/bg-main-mobile.png);
+        background-size: 100% 40vh;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .frontView{
+        height: 165px;
+        width: 280px;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        
+    }
+    
+    .frontView .cNo{
+       font-size: 22px;
+       letter-spacing: normal;
+       
+    }
+    
+    .frontView .holder{
+        font-size: 14px;
+    }
+    
+    .backView{
+        
+        height: 165px;
+        width: 280px;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+    }
+    
+    .info{
+        justify-content:unset;
+        padding: 1rem ;
+    }
+    
+    .info .form{
+        gap: 1rem; 
+    }
+    
+    #cardholderName, #cardnumber{
+        width: 100%;
+    }
+    
+    #expirydate{
+        width: 100%;
+    }
+    
+    #cvc{
+        width: 100%;
+    }
+    
+    /* || confirm */
+    
+    .confirm{
+        padding: 1rem;
+    }
+    
+    .confirm .button{
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
